@@ -11,6 +11,7 @@
       padding: 0;
       line-height: 1.6;
       color: #333;
+      background: #fafafa;
     }
     header {
       background: #222;
@@ -41,22 +42,57 @@
     }
     section {
       padding: 2rem;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
+    }
+    h2 {
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .specialties {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+    .specialty-item {
+      background: #fff;
+      padding: 0.8rem;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      text-align: center;
+      box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
     }
     .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: 1fr;
+      gap: 2rem;
     }
-    .card {
+    .project-category {
+      margin-top: 1rem;
+    }
+    .project-card {
+      background: #fff;
       border: 1px solid #ddd;
       border-radius: 8px;
-      padding: 1rem;
-      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+      padding: 1.2rem;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.08);
     }
-    .card h3 {
+    .project-card h3 {
       margin-top: 0;
+    }
+    .tech-stack {
+      margin-top: 0.8rem;
+    }
+    .tech-badge {
+      display: inline-block;
+      background: #e0e7ff;
+      color: #1e3a8a;
+      padding: 0.3rem 0.6rem;
+      margin: 0.2rem;
+      font-size: 0.85rem;
+      border-radius: 12px;
+      font-weight: 500;
     }
     footer {
       background: #222;
@@ -71,11 +107,12 @@
 
   <header>
     <h1>Hi, I'm Amitabh Roy 👋</h1>
-    <p>Software Developer | Building things with code</p>
+    <p>Software Developer | Distributed Systems | AI & ML Enthusiast</p>
   </header>
 
   <nav>
     <a href="#about">About</a>
+    <a href="#specialties">Specialties</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -83,33 +120,110 @@
   <section id="about">
     <h2>About Me</h2>
     <p>
-      Self-motivated engineer with more than 11 years of experience in designing and delivering distributed systems, scalable orchestration frameworks, with targeted integration of AI and machine learning. 
-      Expertise in Java, Python, Big data tech stack and cloud services(Azure/AWS). Strong track record of ownership, end-to-end delivery, and problem-solving across compute and storage layers.
+      Self-motivated engineer with more than 11 years of experience in designing and delivering distributed systems, scalable orchestration frameworks, and integration of AI/ML solutions. 
+      Expertise in Java, Python, Big Data, and cloud platforms (Azure/AWS). Strong track record of ownership, end-to-end delivery, and problem-solving across compute and storage layers.
     </p>
   </section>
+
+  <section id="specialties">
+    <h2>Specialties</h2>
+    <div class="specialties">
+      <div class="specialty-item">Java</div>
+      <div class="specialty-item">Python</div>
+      <div class="specialty-item">Azure</div>
+      <div class="specialty-item">AWS</div>
+      <div class="specialty-item">Redis</div>
+      <div class="specialty-item">Spark</div>
+      <div class="specialty-item">Hadoop</div>
+      <div class="specialty-item">HBase</div>
+      <div class="specialty-item">MySQL</div>
+      <div class="specialty-item">Airflow</div>
+      <div class="specialty-item">Celery</div>
+      <div class="specialty-item">MongoDB</div>
+      <div class="specialty-item">Cassandra</div>
+      <div class="specialty-item">Databricks</div>
+      <div class="specialty-item">Generative AI</div>
+      <div class="specialty-item">NLP</div>
+      <div class="specialty-item">Neo4j</div>
+      <div class="specialty-item">Vector DB</div>
+      <div class="specialty-item">Multi-Agent Systems</div>
+      <div class="specialty-item">MCP Servers</div>
+    </div>
+  </section>
+
   <section id="projects">
     <h2>Projects</h2>
-    <div class="projects">
-      <div class="card">
-        <h3>AgenticOS framework</h3>
-        <p>It enables developers to build and test multi agent system on a web interface using prebuilt or custom tools using drag and drop on a canvas. 
-          Post testing, developer can publish it as an application for its users to interact with it. 
-          This all comes with minimal coding and also supports human in loop aspect for agentic systems. </p>        
-      </div>
-      <div class="card">
-        <h3>Distributed asset lineage and impact analysis</h3>
-        <p>It enables users to ask questions in natural language to identify affected tables or stored procedures. Leveraged knowledge graphs, vector databases, LLM, and scheduled crawlers/parsers to drive cross-domain observability and change detection.</p>        
-      </div>
-      <div class="card">
-        <h3>Low-code No-Code MLOPS framework</h3>
-        <p>It enables machine learning engineers to ship end-to-end training, testing, and deployment of models quickly, without writing any code. It helped in accelerating publication of models.</p>        
-      </div>
-      <div class="card">
-        <h3>Low-code No-Code ETL orchestration framework</h3>
-        <p>It help developers generate and manages Airflow DAGs from a visual UI. Enabled data engineers to build flexible pipelines with runtime configuration, condition based branching, and parallel execution across systems like Hadoop, Hana, SQL Server, Kafka, S3, and Azure Blob etc.</p>
-        <a href="https://github.com/royamitabh/project3" target="_blank">View on GitHub</a>
+    
+    <div class="project-category">
+      <h3>AI / Multi-Agent Systems</h3>
+      <div class="project-card">
+        <h3>AgenticOS Framework</h3>
+        <p>
+          A framework to build and test multi-agent systems on a web interface using prebuilt or custom tools with drag-and-drop. 
+          Supports human-in-loop workflows and one-click publishing as applications.
+        </p>
+        <div class="tech-stack">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">LLMs</span>
+          <span class="tech-badge">Multi-Agent Systems</span>
+          <span class="tech-badge">React</span>
+          <span class="tech-badge">FastAPI</span>
+        </div>
       </div>
     </div>
+
+    <div class="project-category">
+      <h3>AI / Knowledge Graphs</h3>
+      <div class="project-card">
+        <h3>Distributed Asset Lineage & Impact Analysis</h3>
+        <p>
+          Enabled natural language querying to trace data dependencies and detect changes across domains. 
+          Leveraged knowledge graphs, vector databases, LLMs, and crawlers for observability and impact analysis.
+        </p>
+        <div class="tech-stack">
+          <span class="tech-badge">Neo4j</span>
+          <span class="tech-badge">Vector DB</span>
+          <span class="tech-badge">LLMs</span>
+          <span class="tech-badge">Python</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-category">
+      <h3>ML / MLOps</h3>
+      <div class="project-card">
+        <h3>Low-code No-Code MLOps Framework</h3>
+        <p>
+          A visual platform enabling ML engineers to design, test, and deploy models end-to-end with minimal coding. 
+          Accelerated model lifecycle management and deployment across environments.
+        </p>
+        <div class="tech-stack">
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">MLflow</span>
+          <span class="tech-badge">Kubernetes</span>
+          <span class="tech-badge">Azure</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-category">
+      <h3>Big Data / Orchestration</h3>
+      <div class="project-card">
+        <h3>Low-code No-Code ETL Orchestration Framework</h3>
+        <p>
+          Visual orchestration tool to generate and manage Airflow DAGs with runtime configuration, branching, and parallel execution. 
+          Supported systems like Hadoop, Hana, SQL Server, Kafka, S3, and Azure Blob.
+        </p>
+        <div class="tech-stack">
+          <span class="tech-badge">Airflow</span>
+          <span class="tech-badge">Hadoop</span>
+          <span class="tech-badge">Kafka</span>
+          <span class="tech-badge">SQL Server</span>
+          <span class="tech-badge">Azure Blob</span>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <section id="contact">
@@ -118,7 +232,7 @@
     <ul>
       <li>Email: <a href="mailto:amitabh.roy.choudhary@gmail.com">amitabh.roy.choudhary@gmail.com</a></li>
       <li>GitHub: <a href="https://github.com/royamitabh" target="_blank">github.com/royamitabh</a></li>
-      <li>LinkedIn: <a href="https://www.linkedin.com/amitabh-roy-choudhary-2a720661/" target="_blank">https://www.linkedin.com/amitabh-roy-choudhary-2a720661/</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/amitabh-roy-choudhary-2a720661/" target="_blank">linkedin.com/in/amitabh-roy-choudhary-2a720661</a></li>
     </ul>
   </section>
 
