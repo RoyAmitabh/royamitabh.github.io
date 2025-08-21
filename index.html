@@ -1,22 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amitabh Roy | Portfolio</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; }
-    h1 { color: #333; }
-    a { text-decoration: none; color: blue; }
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+    header {
+      background: #222;
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    header p {
+      margin: 0.5rem 0 0;
+    }
+    nav {
+      background: #444;
+      padding: 0.5rem;
+      text-align: center;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      margin-top: 0;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
-  <h1>Hello, I'm [Your Name] 👋</h1>
-  <p>Welcome to my portfolio site hosted on GitHub Pages.</p>
-  <h2>Projects</h2>
-  <ul>
-    <li><a href="https://github.com/yourusername/project1">Project 1</a></li>
-    <li><a href="https://github.com/yourusername/project2">Project 2</a></li>
-  </ul>
+
+  <header>
+    <h1>Hi, I'm Amitabh Roy 👋</h1>
+    <p>Software Developer | Building things with code</p>
+  </header>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Self-motivated engineer with more than 11 years of experience in designing and delivering distributed systems, scalable orchestration frameworks, with targeted integration of AI and machine learning. 
+      Expertise in Java, Python, Big data tech stack and cloud services(Azure/AWS). Strong track record of ownership, end-to-end delivery, and problem-solving across compute and storage layers.
+    </p>
+  </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>AgenticOS framework</h3>
+        <p>It enables developers to build and test multi agent system on a web interface using prebuilt or custom tools using drag and drop on a canvas. 
+          Post testing, developer can publish it as an application for its users to interact with it. 
+          This all comes with minimal coding and also supports human in loop aspect for agentic systems. </p>        
+      </div>
+      <div class="card">
+        <h3>Distributed asset lineage and impact analysis</h3>
+        <p>It enables users to ask questions in natural language to identify affected tables or stored procedures. Leveraged knowledge graphs, vector databases, LLM, and scheduled crawlers/parsers to drive cross-domain observability and change detection.</p>        
+      </div>
+      <div class="card">
+        <h3>Low-code No-Code MLOPS framework</h3>
+        <p>It enables machine learning engineers to ship end-to-end training, testing, and deployment of models quickly, without writing any code. It helped in accelerating publication of models.</p>        
+      </div>
+      <div class="card">
+        <h3>Low-code No-Code ETL orchestration framework</h3>
+        <p>It help developers generate and manages Airflow DAGs from a visual UI. Enabled data engineers to build flexible pipelines with runtime configuration, condition based branching, and parallel execution across systems like Hadoop, Hana, SQL Server, Kafka, S3, and Azure Blob etc.</p>
+        <a href="https://github.com/royamitabh/project3" target="_blank">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>You can reach me at:</p>
+    <ul>
+      <li>Email: <a href="mailto:your.email@example.com">amitabh.roy.choudhary@gmail.com</a></li>
+      <li>GitHub: <a href="https://github.com/royamitabh" target="_blank">github.com/royamitabh</a></li>
+      <li>LinkedIn: <a href="https://linkedin.com/in/your-profile" target="_blank">https://www.linkedin.com/in/amitabh-roy-choudhary-2a720661/</a></li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Amitabh Roy. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>
